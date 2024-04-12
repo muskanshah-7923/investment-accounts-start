@@ -33,12 +33,13 @@ function mainMenu() {
 
 // MENU SELECTION FUNCTIONS
 function deposit() {
-  // Prompt the user for the index of an account and the amount to deposit into that account.
-  // Modify the data array to reflect the deposit.
-  // Adjust the maxVal variable if necessary.
-  // Use the outputEl to provide a confirmation message.
+  user =
+    // Prompt the user for the index of an account and the amount to deposit into that account.
+    // Modify the data array to reflect the deposit.
+    // Adjust the maxVal variable if necessary.
+    // Use the outputEl to provide a confirmation message.
 
-  outputEl.innerHTML = "Deposit";
+    outputEl.innerHTML = "Deposit";
 }
 
 function withdrawal() {
