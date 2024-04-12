@@ -31,9 +31,7 @@ function mainMenu() {
   }
 }
 
-// ******************************************************
 // MENU SELECTION FUNCTIONS
-// ******************************************************
 function deposit() {
   // Prompt the user for the index of an account and the amount to deposit into that account.
   // Modify the data array to reflect the deposit.
@@ -76,9 +74,7 @@ function hackerAttack() {
   outputEl.innerHTML = "Hacker Attack";
 }
 
-// ******************************************************
 // END OF MENU SELECTION FUNCTIONS
-// ******************************************************
 
 // Function to draw current state of data array
 function drawDataArray() {
