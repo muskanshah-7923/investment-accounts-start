@@ -33,22 +33,29 @@ function mainMenu() {
 
 // MENU SELECTION FUNCTIONS
 function deposit() {
-  user =
-    // Prompt the user for the index of an account and the amount to deposit into that account.
-    // Modify the data array to reflect the deposit.
-    // Adjust the maxVal variable if necessary.
-    // Use the outputEl to provide a confirmation message.
+  let var1 = +prompt("Which account would you like to accesss?");
+  let var2 = +prompt("How much would you like to deposit in that account?");
 
-    outputEl.innerHTML = "Deposit";
+  if (var1 >= 0 && var1 < data.length) {
+    data[var1] += var2;
+  }
+
+  if (data[var1] > maxVal) {
+    maxVal = data[var1];
+  }
+
+  outputEl.innerHTML = "Deposit Confirmed";
 }
 
 function withdrawal() {
-  // Prompt the user for the index of an account and the amount to withdraw from that account.
+  let var3 = +prompt("Which account would you like to accesss?");
+  let var4 = +prompt("How much would you like to deposit in that account?");
+
   // Modify the data array to reflect the withdrawal.
   // Check to assure that the account has enough funds.
   // Use the outputEl to provide a confirmation message.
 
-  outputEl.innerHTML = "Withdrawal";
+  outputEl.innerHTML = "Withdrawal Confirmed";
 }
 
 function countUnder2000() {
