@@ -49,13 +49,22 @@ function deposit() {
 
 function withdrawal() {
   let var3 = +prompt("Which account would you like to accesss?");
-  let var4 = +prompt("How much would you like to deposit in that account?");
+  let var4 = +prompt("How much would you like to withdrawl from that account?");
 
-  // Modify the data array to reflect the withdrawal.
+  if ((data[var3] -= data[var4] >= 0)) {
+    outputEl.innerHTML = "Withdrawl Confirmed";
+  } else if ((data[var3] -= data[var4] <= 0)) {
+    outputEl.innerHTML = "Insifficient balance";
+  }
+
+  // if (var3 >= 0 && var3 < data.length) {
+  //   data[var3] -= var4;
+  //   outputEl.innerHTML = "Withdrawl Confirmed";
+  // } else if (data[var4] < maxVal) {
+  //   outputEl.innerHTML = "Insufficient balance";
+  // }
+
   // Check to assure that the account has enough funds.
-  // Use the outputEl to provide a confirmation message.
-
-  outputEl.innerHTML = "Withdrawal Confirmed";
 }
 
 function countUnder2000() {
