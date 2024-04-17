@@ -39,7 +39,6 @@ function deposit() {
   if (var1 >= 0 && var1 < data.length) {
     data[var1] += var2;
   }
-
   if (data[var1] > maxVal) {
     maxVal = data[var1];
   }
@@ -51,18 +50,12 @@ function withdrawal() {
   let var3 = +prompt("Which account would you like to accesss?");
   let var4 = +prompt("How much would you like to withdrawl from that account?");
 
-  if ((data[var3] -= data[var4] >= 0)) {
+  if (var3 >= 0 && var3 < data.length) {
+    data[var3] -= var4;
     outputEl.innerHTML = "Withdrawl Confirmed";
-  } else if ((data[var3] -= data[var4] <= 0)) {
-    outputEl.innerHTML = "Insifficient balance";
   }
-
-  // if (var3 >= 0 && var3 < data.length) {
-  //   data[var3] -= var4;
-  //   outputEl.innerHTML = "Withdrawl Confirmed";
-  // } else if (data[var4] < maxVal) {
-  //   outputEl.innerHTML = "Insufficient balance";
-  // }
+  if (data[var4] < maxVal);
+  outputEl.innerHTML = "Insufficient balance";
 
   // Check to assure that the account has enough funds.
 }
