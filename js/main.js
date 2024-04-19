@@ -60,26 +60,28 @@ function withdrawal() {
 
 function countUnder2000() {
   let count = 0;
-  for (let i = 0; i < count.length; i++) {
-    count++;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] < 2000) {
+      count++;
+    }
   }
 
-  // Count the number of accounts that are less than 2000
-  // Use the outputEl to display the results of the count.
-
-  outputEl.innerHTML = "Count Under $2000";
+  outputEl.innerHTML = `Number Of accounts with balances less than 2000: ${count}`;
 }
 
 function generousDonor() {
-  // A generous donor has decided to give $500 to every investment.
-  // account that has less than $2000.
-  // Modify the data array to apply this donation.
-  // Use the outputEl to display the total amount of money that was donated.
-
-  outputEl.innerHTML = "Generous Donor";
+  let donor = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] < 2000) {
+      donor++;
+    }
+  }
+  outputEl.innerHTML = `The lucky account who got $500 is: ${donor}`;
 }
 
 function hackerAttack() {
+  let hacker = 0;
+  for (let i = 0; i < data, length; i++) {}
   // A hacker steals 5% from every account.
   // Modify the data array to apply this theft.
   // Use the outputEl to display the total amount that was stolen.
