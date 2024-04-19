@@ -33,34 +33,48 @@ function mainMenu() {
 
 // MENU SELECTION FUNCTIONS
 function deposit() {
-  let var1 = +prompt("Which account would you like to accesss?");
-  let var2 = +prompt("How much would you like to deposit in that account?");
+  let index = +prompt("Which account would you like to accesss?");
+  let deposit = +prompt("How much would you like to deposit in that account?");
 
-  if (var1 >= 0 && var1 < data.length) {
-    data[var1] += var2;
+<<<<<<< HEAD
+  if (index >= 0 && index < data.length) {
+    data[index] += deposit;
+=======
+  if ((data[index] += deposit)) {
+>>>>>>> 558a6dbb1c0e47e192c14e5cc82834c5332e9ec0
   }
-  if (data[var1] > maxVal) {
-    maxVal = data[var1];
+  if (data[index] > maxVal) {
+    maxVal = data[index];
   }
-
   outputEl.innerHTML = "Deposit Confirmed";
 }
 
 function withdrawal() {
-  let var3 = +prompt("Which account would you like to accesss?");
-  let var4 = +prompt("How much would you like to withdrawl from that account?");
+  let index = +prompt("Which account would you like to accesss?");
+  let amount = +prompt(
+    "How much would you like to withdrawl from that account?"
+  );
 
-  if (var3 >= 0 && var3 < data.length) {
-    data[var3] -= var4;
-    outputEl.innerHTML = "Withdrawl Confirmed";
+  if (data[index] - amount >= 0) {
+    data[index] = data[index] - amount;
+  } else {
+    alert("Insifficient Balance");
   }
-  if (data[var4] < maxVal);
-  outputEl.innerHTML = "Insufficient balance";
+<<<<<<< HEAD
+ 
 
   // Check to assure that the account has enough funds.
+=======
+  outputEl.innerHTML = "Withdrawl Confirmed";
+>>>>>>> 558a6dbb1c0e47e192c14e5cc82834c5332e9ec0
 }
 
 function countUnder2000() {
+  let count = 0;
+  for (let i = 0; i < count.length; i++) {
+    count++;
+  }
+
   // Count the number of accounts that are less than 2000
   // Use the outputEl to display the results of the count.
 
@@ -68,7 +82,7 @@ function countUnder2000() {
 }
 
 function generousDonor() {
-  // A generous donor has decided to give $500 to every investment
+  // A generous donor has decided to give $500 to every investment.
   // account that has less than $2000.
   // Modify the data array to apply this donation.
   // Use the outputEl to display the total amount of money that was donated.
