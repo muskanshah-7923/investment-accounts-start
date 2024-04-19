@@ -36,8 +36,11 @@ function deposit() {
   let index = +prompt("Which account would you like to accesss?");
   let deposit = +prompt("How much would you like to deposit in that account?");
 
+<<<<<<< HEAD
   if (index >= 0 && index < data.length) {
     data[index] += deposit;
+=======
+>>>>>>> 558a6dbb1c0e47e192c14e5cc82834c5332e9ec0
   if ((data[index] += deposit)) {
   }
   if (data[index] > maxVal) {
@@ -57,17 +60,25 @@ function withdrawal() {
   } else {
     alert("Insifficient Balance");
   }
+<<<<<<< HEAD
  
 
   // Check to assure that the account has enough funds.
   outputEl.innerHTML = "Withdrawl Confirmed";
 }
+=======
+  outputEl.innerHTML = "Withdrawl Confirmed";
+>>>>>>> 558a6dbb1c0e47e192c14e5cc82834c5332e9ec0
 }
 
 function countUnder2000() {
   let count = 0;
+<<<<<<< HEAD
   for (let i = 0; i < data.length; i++) {
     if (data[i])
+=======
+  for (let i = 0; i < count.length; i++) {
+>>>>>>> 558a6dbb1c0e47e192c14e5cc82834c5332e9ec0
     count++;
   }
 
