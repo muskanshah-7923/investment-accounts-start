@@ -36,12 +36,13 @@ function deposit() {
   let index = +prompt("Which account would you like to accesss?");
   let deposit = +prompt("How much would you like to deposit in that account?");
 
-  if ((data[index] += deposit)) {
+  if (data[index] += deposit) {
+    outputEl.innerHTML = "Deposit Confirmed";
   }
+  
   if (data[index] > maxVal) {
     maxVal = data[index];
   }
-  outputEl.innerHTML = "Deposit Confirmed";
 }
 
 function withdrawal() {
@@ -58,13 +59,19 @@ function withdrawal() {
   outputEl.innerHTML = "Withdrawl Confirmed";
 }
 
+
 function countUnder2000() {
   let count = 0;
   for (let i = 0; i < data.length; i++) {
     if (data[i] < 2000) {
+<<<<<<< HEAD
       count++;
     }
+=======
+    count++;
+>>>>>>> 5fcf3b3d99d6f9740507e3ef1a6ee14aacd77284
   }
+}
 
   outputEl.innerHTML = `Number Of accounts with balances less than 2000: ${count}`;
 }
@@ -72,10 +79,21 @@ function countUnder2000() {
 function generousDonor() {
   let donor = 0;
   for (let i = 0; i < data.length; i++) {
+<<<<<<< HEAD
     if (data[i] < 2000) {
       donor++;
     }
   }
+=======
+    if (data[i] < 2000)
+    donor += data[i]
+  }
+  // A generous donor has decided to give $500 to every investment.
+  // account that has less than $2000.
+  // Modify the data array to apply this donation.
+  // Use the outputEl to display the total amount of money that was donated.
+
+>>>>>>> 5fcf3b3d99d6f9740507e3ef1a6ee14aacd77284
   outputEl.innerHTML = `The lucky account who got $500 is: ${donor}`;
 }
 
