@@ -36,17 +36,13 @@ function deposit() {
   let index = +prompt("Which account would you like to accesss?");
   let deposit = +prompt("How much would you like to deposit in that account?");
 
-<<<<<<< HEAD
-  if (index >= 0 && index < data.length) {
-    data[index] += deposit;
-=======
->>>>>>> 558a6dbb1c0e47e192c14e5cc82834c5332e9ec0
-  if ((data[index] += deposit)) {
+  if (data[index] += deposit) {
+    outputEl.innerHTML = "Deposit Confirmed";
   }
+  
   if (data[index] > maxVal) {
     maxVal = data[index];
   }
-  outputEl.innerHTML = "Deposit Confirmed";
 }
 
 function withdrawal() {
@@ -60,41 +56,33 @@ function withdrawal() {
   } else {
     alert("Insifficient Balance");
   }
-<<<<<<< HEAD
- 
+  outputEl.innerHTML = "Withdrawl Confirmed";
+}
 
-  // Check to assure that the account has enough funds.
-  outputEl.innerHTML = "Withdrawl Confirmed";
-}
-=======
-  outputEl.innerHTML = "Withdrawl Confirmed";
->>>>>>> 558a6dbb1c0e47e192c14e5cc82834c5332e9ec0
-}
 
 function countUnder2000() {
   let count = 0;
-<<<<<<< HEAD
   for (let i = 0; i < data.length; i++) {
-    if (data[i])
-=======
-  for (let i = 0; i < count.length; i++) {
->>>>>>> 558a6dbb1c0e47e192c14e5cc82834c5332e9ec0
+    if (data[i] < 2000) {
     count++;
   }
+}
 
-  // Count the number of accounts that are less than 2000
-  // Use the outputEl to display the results of the count.
-
-  outputEl.innerHTML = "Count Under $2000";
+  outputEl.innerHTML = `Number Of accounts with balances less than 2000: ${count}`;
 }
 
 function generousDonor() {
+  let donor = 0;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] < 2000)
+    donor += data[i]
+  }
   // A generous donor has decided to give $500 to every investment.
   // account that has less than $2000.
   // Modify the data array to apply this donation.
   // Use the outputEl to display the total amount of money that was donated.
 
-  outputEl.innerHTML = "Generous Donor";
+  outputEl.innerHTML = `The lucky account who got $500 is: ${donor}`;
 }
 
 function hackerAttack() {
