@@ -74,7 +74,6 @@ function generousDonor() {
   let donor = 0;
   for (let i = 0; i < data.length; i++) {
     if (data[i] < 2000) {
-      data[i] + 500;
       donor += 500;
     }
   }
@@ -84,7 +83,7 @@ function generousDonor() {
 function hackerAttack() {
   let theft = 0;
   for (let i = 0; i < data.length; i++) {
-    theft += data[i] * 0.05;
+    if (theft += data[i] * 0.05);
     data[i] = data[i] - data[i] * 0.05;
   }
   outputEl.innerHTML = `The total amount stolen was: ${theft}`;
